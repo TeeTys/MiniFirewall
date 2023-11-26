@@ -1,4 +1,4 @@
-obj-m += mini-firewall.o
+obj-m += print_teste.o
 PWD := $(CURDIR)
 all:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
