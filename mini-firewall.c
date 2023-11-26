@@ -33,7 +33,7 @@ ssize_t printteste_write(struct file *filp, const char __user *buff, size_t len,
         return -EINVAL;
     }
 
-    // Copiar a mensagem do espaço do usuário para o buffer do kernel
+
     if (copy_from_user(&kernel_args, buff, len)) {
         printk(KERN_ERR "Falha ao copiar dados do espaço do usuário para o kernel\n");
         return -EFAULT;
