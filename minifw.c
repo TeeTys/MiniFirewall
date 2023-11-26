@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
         exit(EXIT_FAILURE);
     } 
 
-    // Open kernel module archive
+    // Open kernel module file
     fd = open(DEVICE_PATH, O_WRONLY);
     if (fd == -1) {
         perror("Falha ao abrir o arquivo do módulo do kernel");
@@ -55,7 +55,7 @@ int main(int argc, char *argv[]) {
 	} 
     }
 
-    // Write the message in kernel module archive
+    // Write the message in kernel module file
    
     if (write(fd, &args, sizeof(args)) == -1) {
         perror("Falha ao escrever no arquivo do módulo do kernel");
@@ -65,7 +65,7 @@ int main(int argc, char *argv[]) {
 
     printf("Mensagem enviada para o módulo do kernel.\n");
 
-    // Close kernel module archive
+    // Close kernel module file
     close(fd);
 
     return 0;
