@@ -10,7 +10,7 @@ void print_usage(char *program_name) {
     fprintf(stderr, "Uso: %s --arg1 'arg1' --arg2 'arg2' --arg3 'arg3'...\n", program_name);
 }
 
-void trimTrailing(char * str);
+
 
 struct UserArguments {
     char arg1[50];
