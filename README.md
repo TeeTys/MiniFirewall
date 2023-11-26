@@ -25,11 +25,16 @@ This mini-firewall also prints kernel messages and you can check it using the sa
 Run "./minifw [Arguments] [Value]"
 
 Arguments: -P (Protocol) value: "TCP/UDP/ICMP" 
+
            -I (Ip adress) value: "x.x.x.x"
+           
            -A (Action) value: "ALLOW/BLOCK"
 
 Example: ./minifw -P "TCP" -A "BLOCK";
+
          ./minifw -I "1.2.3.4" -A "BLOCK";
+         
          ./minifw -P "UDP" -A "ALLOW";
+         
          ./minifw -P "ICMP" -A "BLOCK";
 
